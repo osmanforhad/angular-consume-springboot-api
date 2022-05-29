@@ -8,12 +8,13 @@ import { Employee } from './employee';
 })
 export class EmployeeService {
 
-  private base_URL = "http://localhost:8080/api/v1/employees";
+  private base_URL = "http://localhost:8080";
+  private api_URL = this.base_URL + "/api/v1";
 
   constructor(private httpClinet: HttpClient) { }
 
   getEmployeeList(): Observable<Employee[]>{
-    return this.httpClinet.get<Employee[]>(`${this.base_URL}`);
+    return this.httpClinet.get<Employee[]>(`${this.api_URL + "/employees"}`);
   }
 
 }
