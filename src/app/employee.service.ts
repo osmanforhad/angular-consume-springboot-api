@@ -29,4 +29,8 @@ export class EmployeeService {
     return this.httpClinet.put(`${this.api_URL + "/update_employee"}/${id}`, employee);
   }
 
+  deleteEmployee(id: number):Observable<Object>{
+    return this.httpClinet.delete(`${this.api_URL + "/delete_employee"}/${id}`);
+  }
+
 }
