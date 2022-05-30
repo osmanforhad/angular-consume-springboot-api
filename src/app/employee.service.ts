@@ -21,4 +21,12 @@ export class EmployeeService {
     return this.httpClinet.post(`${this.api_URL + "/create_employee"}`, employee);
   }
 
+  getEmployeeById(id: number):Observable<Employee>{
+    return this.httpClinet.get<Employee>(`${this.api_URL + "/employee"}/${id}`);
+  }
+
+  updateEmployee(id: number, employee: Employee): Observable<Object>{
+    return this.httpClinet.put(`${this.api_URL + "/update_employee"}/${id}`, employee);
+  }
+
 }
