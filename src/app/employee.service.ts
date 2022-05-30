@@ -17,4 +17,8 @@ export class EmployeeService {
     return this.httpClinet.get<Employee[]>(`${this.api_URL + "/employees"}`);
   }
 
+  createEmployee(employee:Employee):Observable<Object>{
+    return this.httpClinet.post(`${this.api_URL + "/create_employee"}`, employee);
+  }
+
 }

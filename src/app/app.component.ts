@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-consume-springboot-api';
+  title = 'Spring Boot REST API with Angular js';
 }
